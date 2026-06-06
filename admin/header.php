@@ -1,6 +1,5 @@
 <?php
 session_start();
-// Adjust this path if your config.php is located somewhere else
 require_once "../config.php"; 
 
 // Protect all admin pages globally
@@ -31,7 +30,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
         }
         
-        /* Top Navbar */
         .top-bar { 
             background: linear-gradient(135deg, #1971c2, #2f9e44); 
             color: white; 
@@ -41,10 +39,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
         .top-bar .navbar-brand { font-weight: bold; font-size: 1.5rem; color: white; text-decoration: none; }
         .top-bar .user-details { font-size: 0.9rem; text-align: center; }
         
-        /* Layout Wrapper */
         .wrapper { display: flex; width: 100%; height: calc(100vh - 60px); }
         
-        /* Sidebar */
         .sidebar { 
             width: 250px; 
             background: #fff; 
@@ -68,14 +64,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
         }
         .sidebar i { margin-right: 10px; }
         
-        /* Main Content Area */
         .main-content { 
             flex: 1; 
             padding: 30px; 
             overflow-y: auto; 
         }
         
-        /* Reusable Stat Cards */
         .stat-card { 
             background: #fff; 
             border-radius: 10px; 
