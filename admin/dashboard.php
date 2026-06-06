@@ -1,5 +1,4 @@
 <?php
-// Include the global header (This starts the session and connects to the DB)
 include 'header.php';
 
 // 1. Total Active RFQs (Status = 'Open')
