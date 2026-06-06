@@ -151,13 +151,10 @@ $itemsResult = mysqli_query($conn, "SELECT * FROM purchase_order_items WHERE po_
 </div>
 
 <style>
-/* PDF / PRINT CSS OVERRIDES */
 @media print {
-    /* Hide everything except the invoice */
     body * { visibility: hidden; }
     .no-print { display: none !important; }
     
-    /* Make the invoice take up the whole page perfectly */
     #print-area, #print-area * { visibility: visible; }
     #print-area { 
         position: absolute; 
@@ -168,7 +165,6 @@ $itemsResult = mysqli_query($conn, "SELECT * FROM purchase_order_items WHERE po_
         box-shadow: none !important; 
     }
     
-    /* Ensure colors print correctly */
     * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; }
 }
 </style>
