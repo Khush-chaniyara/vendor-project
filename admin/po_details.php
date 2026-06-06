@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 
-// 1. Get the PO ID from the URL safely
+// 1. Get the PO ID from the URL Via Get
 $po_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($po_id == 0) {
@@ -33,7 +33,6 @@ $po = mysqli_fetch_assoc($poResult);
 $itemsQuery = "SELECT * FROM purchase_order_items WHERE po_id = $po_id";
 $itemsResult = mysqli_query($conn, $itemsQuery);
 
-// Determine Status Badge Color
 $badgeClass = 'bg-secondary';
 if (in_array($po['status'], ['Generated', 'Sent'])) $badgeClass = 'bg-warning text-dark';
 if (in_array($po['status'], ['Accepted', 'Completed'])) $badgeClass = 'bg-success';
@@ -143,7 +142,6 @@ if ($po['status'] == 'Cancelled') $badgeClass = 'bg-danger';
 </div>
 
 <style>
-/* This hides the sidebar and topbar when the user clicks 'Print' */
 @media print {
     body * { visibility: hidden; }
     #print-area, #print-area * { visibility: visible; }
