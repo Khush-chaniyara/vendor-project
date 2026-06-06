@@ -20,7 +20,7 @@ if ($quotation_id > 0) {
         $total_amount = $quote['total_amount'];
         $generated_by = $_SESSION['user_id'];
         
-        // 2. Generate a random PO Number (e.g., PO-2026-842)
+        // 2. Generate a random PO Number
         $po_number = 'PO-' . date('Y') . '-' . str_pad(rand(100, 999), 3, '0', STR_PAD_LEFT);
         $po_date = date('Y-m-d');
 
@@ -34,13 +34,11 @@ if ($quotation_id > 0) {
             // 4. Mark this specific quotation as Accepted
             mysqli_query($conn, "UPDATE quotations SET status = 'Accepted' WHERE quotation_id = $quotation_id");
 
-            // 5. Mark all OTHER quotations for this RFQ as Rejected (Enterprise Logic!)
+            // 5. Mark all OTHER quotations for this RFQ as Rejected
             mysqli_query($conn, "UPDATE quotations SET status = 'Rejected' WHERE rfq_id = $rfq_id AND quotation_id != $quotation_id");
 
-            // 6. Close the original RFQ
             mysqli_query($conn, "UPDATE rfqs SET status = 'Closed' WHERE rfq_id = $rfq_id");
 
-            // 7. Migrate Line Items (Copies data from Quote to PO)
             $itemsQuery = mysqli_query($conn, "
                 SELECT qi.quantity, qi.unit_price, qi.line_total, ri.product_name 
                 FROM quotation_items qi 
@@ -66,7 +64,6 @@ if ($quotation_id > 0) {
     }
 }
 
-// Redirect the user straight to the Invoices/PO screen to see their new document!
 header("Location: invoices.php");
 exit();
 ?>
