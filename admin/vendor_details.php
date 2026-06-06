@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 
-// 1. Get Vendor ID securely
+// 1. Get Vendor ID Via GET
 $vendor_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($vendor_id == 0) {
