@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($checkResult) > 0) {
         $error = "A vendor with this Email or GST Number already exists.";
     } else {
-        // 2. Insert into Database (Admins instantly create 'Active' vendors)
+        // 2. Insert into Database
         $insertSql = "INSERT INTO vendors 
                       (category_id, company_name, gst_number, contact_person, email, phone, address, city, state, vendor_status) 
                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'Active')";
