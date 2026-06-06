@@ -2,6 +2,15 @@
 
 VendorBridge is a comprehensive ERP-based Procurement Management System.
 
+Created By:
+
+Khush Chaniyara -Team Leader and full stack developer
+
+Priyank Kothiya -Backend Php helper and github master
+
+Donna Vadhariya -Front-End UI Developer and Backend Helper 
+
+
 🚀 Key Features
 Admin Portal: User & Role management, system-wide analytics, and vendor oversight.
 
@@ -16,7 +25,7 @@ Real-time Analytics: Bar-chart driven dashboard for monitoring RFQs, POs, and fi
 🛠 Tech Stack
 Frontend: HTML5, CSS3, Bootstrap 5.3, Chart.js.
 
-Backend: PHP 8.x.
+Backend: PHP.
 
 Database: MySQL.
 
