@@ -16,8 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_stmt_get_result($stmt);
 
     if ($user = mysqli_fetch_assoc($result)) {
-        // HACKATHON DEMO LOGIC: 
-        // We pretend to send an email here to keep the demo smooth.
         $success = "Success! Password reset instructions have been sent to <strong>" . htmlspecialchars($email) . "</strong>.";
     } else {
         $error = "No active account found with that email address.";
