@@ -1,0 +1,89 @@
+
+body{
+    background:#f8f9fa;
+    font-family:Segoe UI,sans-serif;
+}
+
+.left-panel{
+    background:linear-gradient(135deg,#1971c2,#2f9e44);
+    color:white;
+    padding:60px;
+    align-items:center;
+}
+
+.left-panel h1{
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.left-panel p{
+    font-size:1.1rem;
+    margin-bottom:25px;
+}
+
+.left-panel ul{
+    padding-left:20px;
+}
+
+.left-panel li{
+    margin-bottom:10px;
+}
+
+.login-card{
+    width:100%;
+    max-width:450px;
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.login-card h2{
+    font-weight:700;
+}
+
+.form-control{
+    height:50px;
+}
+
+.btn-primary{
+    height:50px;
+    background:#1971c2;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#1864ab;
+}
+
+a{
+    text-decoration:none;
+}
+
+.password-wrapper{
+    position:relative;
+    width: 100%;
+}
+
+.show-password-btn{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    border:none;
+    background:none;
+    color:#1971c2;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    z-index:10;
+}
+
+.show-password-btn:hover{
+    color:#1864ab;
+}
+
+.show-password-btn:focus{
+    outline:none;
+}
